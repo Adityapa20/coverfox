@@ -1,0 +1,11 @@
+<suite name="mysuite">
+
+    <test name="mytest">
+        <!-- You can set browser here -->
+        <classes>
+            <!-- Mention the full package name of your test class -->
+            <class name="coverfoxtestt.CoverFoxTestClass"/>
+        </classes>
+    </test>
+
+</suite>
