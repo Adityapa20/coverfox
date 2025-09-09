@@ -1,67 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-06T13:18:03 IST" name="mysuite" finished-at="2025-09-06T13:18:34 IST" duration-ms="31874">
+  <suite started-at="2025-09-09T14:29:12 IST" name="Default suite" finished-at="2025-09-09T14:29:43 IST" duration-ms="31843">
     <groups>
     </groups>
-    <test started-at="2025-09-06T13:18:03 IST" name="mytest" finished-at="2025-09-06T13:18:34 IST" duration-ms="31874">
+    <test started-at="2025-09-09T14:29:12 IST" name="Default test" finished-at="2025-09-09T14:29:43 IST" duration-ms="31843">
       <class name="coverfoxtestt.CoverFoxTestClass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@710f4dc7]" started-at="2025-09-06T13:18:03 IST" name="setUp" finished-at="2025-09-06T13:18:20 IST" duration-ms="17771" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@192c3f1e]" started-at="2025-09-09T14:29:12 IST" name="setUp" finished-at="2025-09-09T14:29:19 IST" duration-ms="7117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="coverfoxhomepage()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@710f4dc7]" started-at="2025-09-06T13:18:20 IST" name="coverfoxhomepage" finished-at="2025-09-06T13:18:21 IST" duration-ms="835" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- coverfoxhomepage -->
-        <test-method signature="healthplanpage()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@710f4dc7]" started-at="2025-09-06T13:18:21 IST" name="healthplanpage" finished-at="2025-09-06T13:18:22 IST" duration-ms="1169" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- healthplanpage -->
-        <test-method signature="memberdetail()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@710f4dc7]" started-at="2025-09-06T13:18:22 IST" name="memberdetail" finished-at="2025-09-06T13:18:33 IST" duration-ms="10061" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="addressdetails()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@192c3f1e]" started-at="2025-09-09T14:29:19 IST" name="addressdetails" finished-at="2025-09-09T14:29:39 IST" duration-ms="20257" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#Age\-You"}
-  (Session info: chrome=140.0.7339.80)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6153629b7aee4215e167ee83d77301b6, findElement {using=id, value=Age-You}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53090}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53090/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6153629b7aee4215e167ee83d77301b6]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='next-btn']' (tried for 5 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Age\-You"}
-  (Session info: chrome=140.0.7339.80)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [6153629b7aee4215e167ee83d77301b6, findElement {using=id, value=Age-You}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53090}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53090/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6153629b7aee4215e167ee83d77301b6
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy19.getTagName(Unknown Source)
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
-at coverfoxpom.coverfoxmememberdetails.selectAge(coverfoxmememberdetails.java:21)
-at coverfoxtestt.CoverFoxTestClass.memberdetail(CoverFoxTestClass.java:42)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='next-btn']' (tried for 5 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at coverfoxpom.CoverFoxAdressDetails.enterpincode(CoverFoxAdressDetails.java:31)
+at coverfoxtestt.CoverFoxTestClass.addressdetails(CoverFoxTestClass.java:63)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -88,17 +48,61 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='next-btn']"}
+  (Session info: chrome=140.0.7339.80)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b614aec1b666aff3549e0f064574bb8c, findElement {using=xpath, value=//div[@class='next-btn']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.80, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\ACER\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61687}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61687/devtoo..., se:cdpVersion: 140.0.7339.80, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b614aec1b666aff3549e0f064574bb8c
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+... 28 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addressdetails -->
+        <test-method signature="coverfoxhomepage()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@192c3f1e]" started-at="2025-09-09T14:29:39 IST" name="coverfoxhomepage" finished-at="2025-09-09T14:29:40 IST" duration-ms="918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- coverfoxhomepage -->
+        <test-method signature="healthplanpage()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@192c3f1e]" started-at="2025-09-09T14:29:40 IST" name="healthplanpage" finished-at="2025-09-09T14:29:42 IST" duration-ms="1764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- healthplanpage -->
+        <test-method signature="memberdetail()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@192c3f1e]" started-at="2025-09-09T14:29:42 IST" name="memberdetail" finished-at="2025-09-09T14:29:43 IST" duration-ms="1168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- memberdetail -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@710f4dc7]" started-at="2025-09-06T13:18:33 IST" name="TearDown" finished-at="2025-09-06T13:18:34 IST" duration-ms="1927" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:coverfoxtestt.CoverFoxTestClass@192c3f1e]" started-at="2025-09-09T14:29:43 IST" name="tearDown" finished-at="2025-09-09T14:29:43 IST" duration-ms="492" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TearDown -->
+        </test-method> <!-- tearDown -->
       </class> <!-- coverfoxtestt.CoverFoxTestClass -->
-    </test> <!-- mytest -->
-  </suite> <!-- mysuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

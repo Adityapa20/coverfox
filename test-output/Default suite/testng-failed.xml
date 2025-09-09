@@ -5,9 +5,9 @@
     <classes>
       <class name="coverfoxtestt.CoverFoxTestClass">
         <methods>
-          <include name="TearDown"/>
-          <include name="memberdetail"/>
           <include name="setUp"/>
+          <include name="addressdetails"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- coverfoxtestt.CoverFoxTestClass -->
     </classes>

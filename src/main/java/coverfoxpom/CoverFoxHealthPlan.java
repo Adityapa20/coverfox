@@ -1,43 +1,73 @@
 package coverfoxpom;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CoverFoxHealthPlan {
-    protected WebDriver driver;
-       // Write locator 
-    @FindBy(xpath = "(//div[@class='next-btn'])[1]") 
-    private WebElement nextbutton;
-
-    @FindBy(xpath = "//div[@class='sel-mem-container']//div[1]//div[1]//img[1]") 
-    private WebElement gender;
-    @FindBy(xpath = "//div[@class='ms-option selected']") private WebElement Wife;
     
-    @FindBy(xpath = "//div[@class='member-container']//div[3]") private WebElement Daughter;
+    private static final Logger logger = LoggerFactory.getLogger(CoverFoxHealthPlan.class);
+    protected WebDriver driver;
 
-    public CoverFoxHealthPlan(WebDriver driver  ) {
+    // Locators
+    @FindBy(xpath = "//div[@class='gb--option gb--active']") 
+    private WebElement gender;
+
+    @FindBy(xpath = "//div[text()='Wife']") 
+    private WebElement wife;
+
+    @FindBy(xpath = "//div[text()='Daughter']") 
+    private WebElement daughter;
+
+    @FindBy(xpath = "(//div[@class='next-btn'])") 
+    private WebElement nextButton;
+
+    // Constructor
+    public CoverFoxHealthPlan(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        logger.info("CoverFoxHealthPlan page initialized.");
     }
 
     public void selectGender() {
-        gender.click();
+        try {
+            gender.click();
+            logger.info("Selected Gender option.");
+        } catch (Exception e) {
+            logger.error("Failed to select Gender option.", e);
+        }
     }
-    public void selectwife() {
-    	Wife.click();
+
+    public void selectWife() {
+        try {
+            wife.click();
+            logger.info("Selected 'Wife' option.");
+        } catch (Exception e) {
+            logger.error("Failed to select 'Wife' option.", e);
+        }
     }
+
     public void selectDaughter() {
-    	Daughter.click();
+        try {
+            daughter.click();
+            logger.info("Selected 'Daughter' option.");
+        } catch (Exception e) {
+            logger.error("Failed to select 'Daughter' option.", e);
+        }
     }
+
     public void clickNextButton() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", nextbutton);
-        nextbutton.click();
-       
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView(true);", nextButton);
+            nextButton.click();
+            logger.info("Clicked on Next button.");
+        } catch (Exception e) {
+            logger.error("Failed to click on Next button.", e);
+        }
     }
 }

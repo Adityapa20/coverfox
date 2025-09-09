@@ -1,9 +1,11 @@
 <suite name="mysuite">
 
     <test name="mytest">
-        <!-- You can set browser here -->
+        <!-- Pass browser name here: chrome | firefox | edge -->
+        <parameter name="browser" value="chrome"/>
+        
         <classes>
-            <!-- Mention the full package name of your test class -->
+            <!-- Full package + class name -->
             <class name="coverfoxtestt.CoverFoxTestClass"/>
         </classes>
     </test>

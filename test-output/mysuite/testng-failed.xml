@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [mysuite]">
   <test thread-count="5" name="mytest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="coverfoxtestt.CoverFoxTestClass">
         <methods>
-          <include name="TearDown"/>
-          <include name="memberdetail"/>
           <include name="setUp"/>
+          <include name="addressdetails"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- coverfoxtestt.CoverFoxTestClass -->
     </classes>

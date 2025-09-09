@@ -1,7 +1,8 @@
 package base;
 
+import java.io.IOException;
 import java.time.Duration;
-
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,36 +15,62 @@ import org.testng.annotations.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Baseclass {
-	
-	protected WebDriver driver;
-    protected WebDriverWait wait; // ADD THIS
 
-	@BeforeClass
-	 public void setUp() {
-		ChromeOptions opt = new ChromeOptions();
-		opt.addArguments("--incognito");  // enable incognito mode
-        opt.addArguments("--start-maximized"); // optional: start maximized
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected Properties config;
 
-		 driver = new ChromeDriver(opt);
-		 
-		 
-		 
-		 driver.manage().window().maximize();
-		 
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		 
-		 driver.manage().deleteAllCookies();
-		 
-         driver.get("https://www.coverfox.com/");	
-         
-	     
-	    }
-	@AfterClass
-	public void TearDown() {
-		if(driver != null) {
-			driver.quit();
-		}
-	}
-	
+    @BeforeClass
+    public void setUp() throws IOException {
+        // Load config.properties from resources
+        config = new Properties();
+        config.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
 
+        String browser = config.getProperty("browser", "chrome"); // default chrome
+        String appUrl = config.getProperty("url");
+
+        if (appUrl == null || appUrl.isEmpty()) {
+            throw new RuntimeException("❌ URL is missing in config.properties!");
+        }
+
+        // Browser selection
+        switch (browser.toLowerCase()) {
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
+            case "chrome":
+            default:
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions opt = new ChromeOptions();
+                opt.addArguments("--incognito");
+                opt.addArguments("--start-maximized");
+                driver = new ChromeDriver(opt);
+                break;
+        }
+
+        // Timeouts
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(15));
+        driver.manage().deleteAllCookies();
+
+        // Explicit wait
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+        // Launch URL
+        System.out.println("✅ Launching: " + appUrl);
+        driver.get(appUrl);
+    }
+
+    @AfterClass
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
