@@ -30,7 +30,7 @@ public class CoverFoxTestClass extends Baseclass {
 
 	}
 
-	@Test
+	@Test(privority =2)
 	public void healthplanpage() {
 		// Step 2: Health Plan Page
 		CoverFoxHealthPlan healthPlan = new CoverFoxHealthPlan(driver);
